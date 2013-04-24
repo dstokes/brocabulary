@@ -4,9 +4,9 @@
   "description": "Expand your brocabulary",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "expresso"
   },
-  "repository": "",
+  "repository": "git://github.com/dstokes/brocabulary.git",
   "author": "Drew Stokes",
   "license": "BSD"
 }
