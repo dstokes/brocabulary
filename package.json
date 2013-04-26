@@ -1,6 +1,6 @@
 {
   "name": "brocabulary",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Expand your brocabulary",
   "main": "index.js",
   "scripts": {
