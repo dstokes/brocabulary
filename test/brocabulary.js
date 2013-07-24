@@ -9,5 +9,7 @@ exports.brocabulary = function() {
   brocabulary(function(b) {
     clearTimeout(to);
     assert.ok(b.random().length);
+    console.log(b.broify('tuxedo'));
+    assert(b.broify('tuxedo') === 'Tuxedbro');
   });
 };

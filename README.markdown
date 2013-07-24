@@ -30,3 +30,8 @@ b.random()
 ----------
 
 Return a random broism
+
+b.broify(str)
+----------
+
+Broify the words in a string based on levenshtein dist

@@ -1,5 +1,11 @@
 var fs = require('fs')
-  , dictFile = __dirname + '/data/dict';
+  , listenshtein = require('listenshtein');
+
+var dictFile = __dirname + '/data/dict';
+
+function rand(l) {
+  return Math.floor(Math.random()*l);
+}
 
 function brocabulary(cb) {
   var self  = {}
@@ -7,7 +13,16 @@ function brocabulary(cb) {
     , s = fs.createReadStream(dictFile);
 
   self.random = function() {
-    return dict[Math.floor(Math.random()*dict.length)];
+    return dict[rand(dict.length)];
+  };
+
+  self.broify = function(words) {
+    if(typeof words === 'string') words = words.split(' ');
+    for(var i = 0, l = words.length; i < l; i++) {
+      var match = listenshtein(words[i], dict, 3);
+      if(match) words[i] = match;
+    }
+    return words.join(' ');
   };
 
   cb = (cb || function() {});

@@ -8,5 +8,8 @@
   },
   "repository": "git://github.com/dstokes/brocabulary.git",
   "author": "Drew Stokes",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "listenshtein": "0.0.0"
+  }
 }
