@@ -4,12 +4,13 @@
   "description": "Expand your brocabulary",
   "main": "index.js",
   "scripts": {
-    "test": "expresso"
+    "test": "node test/brocabulary.js"
   },
   "repository": "git://github.com/dstokes/brocabulary.git",
   "author": "Drew Stokes",
   "license": "BSD",
   "dependencies": {
-    "listenshtein": "0.0.0"
+    "listenshtein": "0.0.0",
+    "tape": "~2.3.2"
   }
 }

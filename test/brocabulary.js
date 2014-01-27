@@ -1,7 +1,8 @@
-var assert = require('assert')
+var test = require('tape')
+  , assert = require('assert')
   , brocabulary = require('../');
 
-exports.brocabulary = function() {
+test('broifys strings', function(t) {
   var to = setTimeout(function () {
     assert.fail('never finished');
   }, 15000);
@@ -9,7 +10,7 @@ exports.brocabulary = function() {
   brocabulary(function(b) {
     clearTimeout(to);
     assert.ok(b.random().length);
-    console.log(b.broify('tuxedo'));
     assert(b.broify('tuxedo') === 'Tuxedbro');
+    t.end();
   });
-};
+});
