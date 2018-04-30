@@ -44,5 +44,5 @@ install
 With [npm](http://npmjs.org) do:
 
 ```
-npm install sslice
+npm install brocabulary
 ```
